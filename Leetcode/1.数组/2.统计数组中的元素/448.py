@@ -14,5 +14,5 @@ class Solution(object):
         return ans
 
 #数量太大可以考虑布隆过滤器，但是布隆过滤器有误判率
-#原地修改数组有待研究，实际还是使用set
+#原地修改数组有待研究，实际还是使用set, 其核心思想在于n[i] = i
 #本题如果使用for in list会超时，必须用set
