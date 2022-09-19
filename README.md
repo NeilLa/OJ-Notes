@@ -1,3 +1,9 @@
 # OJ-Notes
-My notes on Leetcode or other websites
-能用c尽量用c，实在不会用python，但要注明原因，以便日后补上
+
+从2023秋招开始的刷题笔记。
+
+## Part 1 数据结构复习
+
+使用c语言，实现各个数据结构以及对应的方法，并配以简单的drive程序进行测试。
+
+1. Stack
