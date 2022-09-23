@@ -127,13 +127,41 @@ void printList(Head head) {
     printf("%d\n", current_node->val);
 }
 
+Head reverseList(Head head) {
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+
+    Node pre_node = head;
+    Node cur_node = pre_node->next;
+    Node temp_node = NULL;
+
+    while (cur_node != NULL) {
+        temp_node = cur_node->next;
+
+        if (pre_node == head) {
+            pre_node->next = NULL;
+        }
+
+        cur_node->next = pre_node;
+        pre_node = cur_node;
+        cur_node = temp_node;
+    }
+
+    return pre_node;
+}
+
 //drive
 int main () {
     Head head = createEmptyList();
     insertHead(5, head);
+    insertHead(4, head);
     insertTail(6, head);
     insertTail(7, head);
 
     printList(head);
+
+    Head rev_h = reverseList(head);
+    printList(rev_h);
     return 0;
 }
